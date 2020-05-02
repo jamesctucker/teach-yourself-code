@@ -37,7 +37,7 @@ function Video({ video }) {
           }
         `,
         variables: {
-          user_id: userId ? userId : undefined,
+          user_id: user ? user.sub : undefined,
           video_id: videoToShow.snippet.resourceId.videoId,
         },
       },
