@@ -5,7 +5,12 @@ const backButton = () => (
     <button
       className="back-btn"
       onClick={() => Router.back()}
-      style={{ textDecoration: "underline", padding: "1em 0em" }}
+      style={{
+        textDecoration: "underline",
+        padding: "1em 0em",
+        background: "transparent",
+        border: "none",
+      }}
     >
       back
     </button>
