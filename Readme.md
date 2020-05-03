@@ -61,7 +61,7 @@ REDIRECT_URI=http://localhost:3000/api/callback
 POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
 ```
 
-## Create the following rules in your Auth0 Dashboard
+### Create the following rules in your Auth0 Dashboard
 
 1. hasura-jwt-claim
 
@@ -119,7 +119,7 @@ function userSyncRule(user, context, callback) {
 }
 ```
 
-## Set up Postgres Database via Hasura Console
+### Set up Postgres Database via Hasura Console
 
 Run the following SQL command.
 
@@ -245,7 +245,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_current_playlist_id_fkey FOREIGN KEY (current_playlist_id) REFERENCES public.playlists(id) ON UPDATE RESTRICT ON DELETE RESTRICT;
 ```
 
-## Build for Production
+### Build for Production
 
 ```
   yarn run build
