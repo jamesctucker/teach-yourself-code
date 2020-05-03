@@ -118,7 +118,7 @@ function Video({ video }) {
       {router.route == "/tutorial" ? (
         <div
           className="column is-5"
-          style={{ maxHeight: "400px", overflow: "scroll" }}
+          style={{ maxHeight: "400px", overflow: "auto" }}
         >
           <NotesList user={user} selection={videoToShow} seek={handleSeekTo} />
         </div>
