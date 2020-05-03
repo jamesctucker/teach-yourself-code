@@ -2,7 +2,7 @@
 
 .preview-container {
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .top-preview-row {
@@ -11,7 +11,7 @@
 }
 
 .description-column {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .description-text {

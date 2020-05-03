@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   padding: 1em;
-  margin: 1em 0em;
+  margin: 1em 0em 3em 0em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,13 +14,14 @@
   min-height: 275px;
   width: 200px;
   margin: 0.5em;
+  cursor: pointer;
 }
 
 .playlists-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .playlist-description {
@@ -46,7 +47,7 @@
 .tutorial-container {
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
