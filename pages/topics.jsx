@@ -66,6 +66,20 @@ function Topics() {
               className="topic-graphic"
             />
           </Link>
+          <Link href="tutorials?topic=ReactNative">
+            <img
+              src="/static/images/reactnative.png"
+              alt="react native graphic"
+              className="topic-graphic"
+            />
+          </Link>
+          <Link href="tutorials?topic=Flutter">
+            <img
+              src="/static/images/flutter.png"
+              alt="flutter graphic"
+              className="topic-graphic"
+            />
+          </Link>
         </div>
       </div>
     </Layout>
