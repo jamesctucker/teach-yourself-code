@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import BackButton from "../components/BackButton";
 
 export default function About() {
   return (
@@ -7,6 +8,7 @@ export default function About() {
         className="about-view"
         style={{ display: "flex", flexDirection: "column" }}
       >
+        <BackButton />
         <div className="text-container">
           <h3 className="title" style={{ margin: "1em .25em" }}>
             About

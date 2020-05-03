@@ -1,6 +1,7 @@
 import Layout from "../components/Layout/index";
 import Link from "next/link";
 import SignUpCTA from "../components/SignUpCTA";
+import BackButton from "../components/BackButton";
 import { useSelector } from "react-redux";
 
 function Topics() {
@@ -9,11 +10,11 @@ function Topics() {
   return (
     <Layout>
       <div className="topic-view">
+        <BackButton />
         <h3 className="title topic-header has-text-centered">
           <b>What do you want to learn?</b>
         </h3>
         {!user ? <SignUpCTA /> : null}
-
         <div className="topics-container">
           <Link href="tutorials?topic=HTML5">
             <img

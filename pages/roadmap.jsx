@@ -1,9 +1,11 @@
 import Layout from "../components/Layout/index";
+import BackButton from "../components/BackButton";
 
 function Roadmap() {
   return (
     <Layout>
       <div className="roadmap-container">
+        <BackButton />
         <h3 className="title">Roadmap</h3>
         <p className="subtitle">
           A list of update releases and planned improvements

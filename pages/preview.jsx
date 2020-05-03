@@ -4,11 +4,11 @@ import Router, { useRouter } from "next/router";
 import Video from "../components/Video/Video";
 import Description from "../components/Tutorial/Description";
 import SignUpCTA from "../components/SignUpCTA";
+import BackButton from "../components/BackButton";
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { useSelector } from "react-redux";
 import { addUserPlaylist } from "../lib/mutations";
 import gql from "graphql-tag";
-import Linkify from "react-linkify";
 
 const apiKey = process.env.YOUTUBE_API_KEY;
 
@@ -70,8 +70,8 @@ function Preview({ video, videos }) {
   return (
     <Layout>
       <div className="preview-container">
+        <BackButton />
         <div>
-          {/* TODO: This needs to the playlisy title */}
           <h3 className="is-size-4">
             <b>Preview of {video.snippet.title}</b>
           </h3>

@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import TutorialCard from "../components/Tutorial/TutorialCard";
+import BackButton from "../components/BackButton";
 import { useQuery } from "@apollo/react-hooks";
 import { fetchUserPlaylists } from "../lib/queries";
 import { useSelector } from "react-redux";
@@ -18,6 +19,7 @@ function Subscriptions() {
         className="subscriptions-view is-flex"
         style={{ flexDirection: "column" }}
       >
+        <BackButton />
         {user ? (
           <h3 className="subscriptions-header title is-size-3 is-size-5-touch has-text-centered">
             Here are your tutorials!
