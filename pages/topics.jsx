@@ -1,13 +1,19 @@
 import Layout from "../components/Layout/index";
 import Link from "next/link";
+import SignUpCTA from "../components/SignUpCTA";
+import { useSelector } from "react-redux";
 
 function Topics() {
+  const user = useSelector((state) => state.user.currentUser);
+
   return (
     <Layout>
       <div className="topic-view">
         <h3 className="title topic-header has-text-centered">
           <b>What do you want to learn?</b>
         </h3>
+        {!user ? <SignUpCTA /> : null}
+
         <div className="topics-container">
           <Link href="tutorials?topic=HTML5">
             <img

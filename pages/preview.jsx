@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Router, { useRouter } from "next/router";
 import Video from "../components/Video/Video";
 import Description from "../components/Tutorial/Description";
+import SignUpCTA from "../components/SignUpCTA";
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { useSelector } from "react-redux";
 import { addUserPlaylist } from "../lib/mutations";
@@ -72,12 +73,13 @@ function Preview({ video, videos }) {
         <div>
           {/* TODO: This needs to the playlisy title */}
           <h3 className="is-size-4">
-            <b>{video.snippet.title}</b>
+            <b>Preview of {video.snippet.title}</b>
           </h3>
         </div>
         <div className="columns top-preview-row">
           <div className="column video-column is-7">
             <Video video={video} className="preview-video" />
+            {!user ? <SignUpCTA /> : null}
           </div>
           <div className="column description-column is-5">
             <Description video={video} />
@@ -110,7 +112,7 @@ function Preview({ video, videos }) {
             className="is-size-5 has-text-centered"
             style={{ margin: ".5em 0em" }}
           >
-            <b>Table of Contents</b>
+            <b>Additional Videos in Tutorial</b>
           </h3>
           <ul className="tutorial-playlist">{videoList}</ul>
         </div>
