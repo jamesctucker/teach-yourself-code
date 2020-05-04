@@ -1,10 +1,11 @@
 const withSass = require("@zeit/next-sass");
 const withImages = require("next-images");
 const withCSS = require("@zeit/next-css");
+const withPurgeCss = require("next-purgecss");
 
 require("dotenv").config();
 
-module.exports = withImages(withCSS());
+module.exports = withImages(withCSS(withPurgeCss()));
 
 module.exports = {
   target: "serverless",
