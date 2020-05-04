@@ -5,11 +5,11 @@ const withPurgeCss = require("next-purgecss");
 
 require("dotenv").config();
 
-module.exports = withImages(withCSS(withPurgeCss()));
+module.exports = withImages(withCSS());
 
 module.exports = {
   target: "serverless",
-  ...withSass(),
+  ...withSass(withPurgeCss()),
 
   env: {
     AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
