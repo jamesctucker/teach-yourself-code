@@ -8,6 +8,7 @@ import ApolloClient from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { HttpLink } from "apollo-link-http";
 import Head from "next/head";
+import Router, { useRouter } from "next/router";
 
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -60,9 +61,14 @@ const createApolloClient = () => {
 const client = createApolloClient();
 
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  let title =
+    router.pathname.slice(1).charAt(0).toUpperCase() + router.pathname.slice(2);
+
   return (
     <ApolloProvider client={client}>
       <Head>
+        <title>{title ? title : "Home"}</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Provider store={store}>

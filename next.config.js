@@ -21,6 +21,6 @@ module.exports = {
       process.env.POST_LOGOUT_REDIRECT_URI || "http://localhost:8800/",
     SESSION_COOKIE_SECRET: process.env.SESSION_COOKIE_SECRET,
     SESSION_COOKIE_LIFETIME: 7200, // 2 hours
-    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY
-  }
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+  },
 };
