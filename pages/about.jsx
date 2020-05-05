@@ -6,7 +6,7 @@ export default function About() {
     <Layout>
       <div
         className="about-view"
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{ display: "flex", flexDirection: "column", padding: "1em" }}
       >
         <BackButton />
         <div className="text-container">
