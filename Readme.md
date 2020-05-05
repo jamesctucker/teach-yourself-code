@@ -28,18 +28,40 @@
 
 ### Obtain the following .env variables by setting up YouTube API, Hasura, and Auth0:
 
-1. Sign-up for a YouTube API key.
+Create a .env file in your project root with:
+
+```
+AUTH0_DOMAIN =
+AUTH0_CLIENT_ID =
+AUTH0_CLIENT_SECRET =
+REDIRECT_URI= http://localhost:3000/api/callback
+POST_LOGOUT_REDIRECT_URI= http://localhost:3000/
+SESSION_COOKIE_SECRET =
+SESSION_COOKIE_LIFETIME = 7200, // 2 hours
+YOUTUBE_API_KEY =
+
+```
+
+**Get the vars by following these:**
+
+1. Sign-up for a YouTube API key. [Follow This](https://www.slickremix.com/docs/get-api-key-for-youtube/)
 
 ```
 YOUTUBE_API_KEY=
 ```
 
-2. Set-up a [Hasura GraphQL Engine](https://github.com/hasura/graphql-engine) to obtain the following two values. Hasura is used to query our Postgres db. The quickest option for setup is via a [free Heroku server](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/index.html)
+2. [![Deploy A Hasura GraphQL Engine](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku) to obtain the following two values. Hasura is used to query our Postgres db.
 
 ```
 HASURA_ADMIN_SECRET=
 HASURA_GRAPHQL_JWT_SECRET=
 ```
+
+Hasura admin secret Docs are [here](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/securing-graphql-endpoint.html#add-the-hasura-graphql-admin-secret-env-var).
+
+Hasura graphql jwt secret can be generated [here](https://hasura.io/jwt-config/).
+
+Add jwt Secret to the env vars as you did for `HASURA_ADMIN_SECRET`.
 
 3. Create a free account at Auth0 and set-up a test application following the [Auth0 config instructions here](https://auth0.com/docs/quickstart/spa/react#configure-auth0). It explains where to get the following values:
 
@@ -63,6 +85,9 @@ POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
 ```
 
 ### Create the following rules in your Auth0 Dashboard
+
+Directly through Dashbaord, Under the tab `Rules`.
+Do remember to change the `url: "<your-hasura-graphql-endpoint>"` in `hasura-user-sync` function.
 
 1. hasura-jwt-claim
 
