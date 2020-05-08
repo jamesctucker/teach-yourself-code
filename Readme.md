@@ -50,11 +50,13 @@ YOUTUBE_API_KEY =
 YOUTUBE_API_KEY=
 ```
 
-2. [![Deploy A Hasura GraphQL Engine](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku) to obtain the following two values. Hasura is used to query our Postgres db.
+2. Set-up a [Hasura GraphQL Engine](https://github.com/hasura/graphql-engine) to obtain the following values. Hasura is used to query our Postgres db. The quickest option for setup is via a [free Heroku server](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/index.html)
+=======
 
 ```
 HASURA_ADMIN_SECRET=
 HASURA_GRAPHQL_JWT_SECRET=
+HASURA_ENDPOINT=
 ```
 
 Hasura admin secret Docs are [here](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/securing-graphql-endpoint.html#add-the-hasura-graphql-admin-secret-env-var).
