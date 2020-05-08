@@ -43,12 +43,13 @@ library.add(
 );
 
 const authToken = process.env.HASURA_GRAPHQL_JWT_SECRET;
-const adminSecret = `Megan90591`;
+const adminSecret = process.env.HASURA_ADMIN_SECRET;
+const hasuraEndpoint = process.env.HASURA_ENDPOINT;
 
 const createApolloClient = () => {
   return new ApolloClient({
     link: new HttpLink({
-      uri: "https://teach-yourself-code-hasura.herokuapp.com/v1/graphql",
+      uri: `${hasuraEndpoint}`,
       headers: {
         authorization: `Bearer ${authToken}`,
         "x-hasura-admin-secret": `${adminSecret}`,
