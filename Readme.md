@@ -34,11 +34,12 @@
 YOUTUBE_API_KEY=
 ```
 
-2. Set-up a [Hasura GraphQL Engine](https://github.com/hasura/graphql-engine) to obtain the following two values. Hasura is used to query our Postgres db. The quickest option for setup is via a [free Heroku server](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/index.html)
+2. Set-up a [Hasura GraphQL Engine](https://github.com/hasura/graphql-engine) to obtain the following values. Hasura is used to query our Postgres db. The quickest option for setup is via a [free Heroku server](https://hasura.io/docs/1.0/graphql/manual/deployment/heroku/index.html)
 
 ```
 HASURA_ADMIN_SECRET=
 HASURA_GRAPHQL_JWT_SECRET=
+HASURA_ENDPOINT=
 ```
 
 3. Create a free account at Auth0 and set-up a test application following the [Auth0 config instructions here](https://auth0.com/docs/quickstart/spa/react#configure-auth0). It explains where to get the following values:
