@@ -15,7 +15,7 @@
 - [Apollo GraphQL](https://www.apollographql.com/docs/react/) - GraphQL hooks for fetching data from database
 - [Bulma](https://bulma.io/) - open-source CSS framework
 - [Jest](https://jestjs.io/en/) - unit-testing library
-- [https://vercel.com/] - serverless hosting
+- [Vercel](https://vercel.com/) - serverless hosting
 
 ## To Get It Up And Running Locally
 
