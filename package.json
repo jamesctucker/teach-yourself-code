@@ -44,6 +44,7 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "devDependencies": {
+    "cypress": "^5.5.0",
     "next-purgecss": "^4.0.0"
   }
 }
