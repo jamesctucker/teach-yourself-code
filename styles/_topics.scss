@@ -4,10 +4,11 @@
   height: 128px;
   margin: 0.75em;
   cursor: pointer;
+  z-index: 1;
 }
 
 .topic-graphic:hover {
-  filter: drop-shadow(4px 1px 2px $rueful-rose);
+  filter: drop-shadow(4px 1px 2px lightgray);
 }
 
 .topic-view {
