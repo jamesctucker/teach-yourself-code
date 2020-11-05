@@ -38,6 +38,7 @@ export default function NotesList({ user, selection, seek }) {
         <ul className="notes-list has-text-left">
           {data.notes.map((note) => (
             <li key={note.id} className="note">
+              {/* Clicking accesses handleSeekTo in parent; causes video to jump to specific point in video */}
               <a onClick={() => seek(note.timestamp)}>
                 {formatTimestamp(note.timestamp)}
               </a>

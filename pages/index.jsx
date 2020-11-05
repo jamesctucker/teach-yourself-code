@@ -49,10 +49,6 @@ function Index() {
           <a className="signup-btn" href="/api/login">
             CREATE AN ACCOUNT
           </a>
-
-          {/* <p>
-            or learn more <Link href="/about">here</Link>
-          </p> */}
         </div>
         <div className="column svg-column is-flex is-hidden-touch">
           <img src="/static/images/man-coding.svg" alt="" />

@@ -1,4 +1,3 @@
-import Linkify from "react-linkify";
 import { useDispatch } from "react-redux";
 import { updateCurrentVideo } from "../../store/store";
 

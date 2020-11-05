@@ -11,7 +11,6 @@ function Video({ video }) {
   const ref = useRef(null);
   const router = useRouter();
   const user = useSelector((state) => state.user.currentUser);
-  const userId = useSelector((state) => state.user.userId);
 
   const [currentNote, setNote] = useState("");
   const [timestamp, setTimestamp] = useState(null);
