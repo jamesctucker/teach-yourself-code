@@ -28,11 +28,6 @@ function BottomBar() {
         </Link>
       </div>
       <div className="bottom-nav-link">
-        <Link href="/roadmap">
-          <FontAwesomeIcon icon={["fas", "map"]} className="nav-icon" />
-        </Link>
-      </div>
-      <div className="bottom-nav-link">
         <Link href="/topics">
           <FontAwesomeIcon icon={["fab", "youtube"]} className="nav-icon" />
         </Link>

@@ -133,26 +133,6 @@ function Sidebar() {
           </Link>
         </div>
       ) : null}
-      <div
-        className={router.route == "/roadmap" ? "nav-item-current" : "nav-item"}
-      >
-        <Link href="/roadmap">
-          <FontAwesomeIcon icon={["fas", "map"]} className="nav-icon" />
-        </Link>
-        <Link href="/roadmap">
-          <a
-            className={
-              router.route == "/roadmap"
-                ? "nav-text-current is-size-6"
-                : "nav-text is-size-6"
-            }
-            style={{ margin: ".5em 0em" }}
-          >
-            Roadmap
-          </a>
-        </Link>
-      </div>
-
       {user ? (
         <>
           <div className="nav-item">
